@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    #scary {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      display: none;
+      z-index: 9999;
+    }
+    #scary img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="scary">
+    <img src="FB_IMG_1736778647728" alt="Scary Image">
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("scary").style.display = "flex";
+      const scream = new Audio("scream.mp3");
+      scream.play();
+    }, 5000); // Triggers jump scare after 5 seconds
+  </script>
+</body>
+</html>
